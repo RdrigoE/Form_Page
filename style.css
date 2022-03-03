@@ -1,0 +1,19 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.images{
+    position: static;
+}
+
+.leafs{
+    height: 100vh;
+    width: 50vw;
+}
+
+.odin{
+    background-color: black;
+}
