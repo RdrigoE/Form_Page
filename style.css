@@ -1,4 +1,25 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url("fonts/Montserrat.ttf");
+    }
+
+
+@font-face {
+    font-family: "Norse";
+    src: url("/fonts/Norse.otf");
+    src: url("fonts/Norse.woff") format("woff");
+    src: url("fonts/Norse.woff2") format("woff2");
+    }
+
+*{
+    margin: 0;
+    font-family: "Montserrat";
+}
+
+
+
 body{
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,10 +31,154 @@ body{
 }
 
 .leafs{
+    position: absolute;
     height: 100vh;
-    width: 50vw;
+    width: 35vw;
+    top: 0;
+    left: 0;
 }
 
+.right {
+    top: 0;
+    position: absolute;
+    left: 35vw;
+    height: 100vh;
+    background-color: white;
+  }
+.top > p{
+    padding-right: 20vw;
+    padding-bottom: 2vh;
+}
 .odin{
-    background-color: black;
+    position: absolute;
+    top: 25vh;
+    right: 77vw;
+    height: 25vh;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    height: 34vh;
+}
+
+.top{
+    padding-left: 3vw;
+    padding-bottom: 5vh;
+    padding-top: 10vh;
+    background-color: #E5E7EB;
+    font-size: 25px;
+    font-weight: bold;
+    
+}
+
+.bottom{
+    height: 33vh;
+    background-color: #E5E7EB;
+}
+
+form > p{
+    padding-left: 3vw;
+    padding-top: 2vh;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.blankSpaces{
+    display: flex;
+    flex-direction: column;
+    padding-left: 3vw;
+    font-size: 12px;
+    font-weight:500;
+}
+
+.blankSpaces > div{
+    padding-right: 6vw;
+}
+
+form > div > div{
+    display: flex;
+    flex-direction: row;
+    padding-top: 3vh;
+}
+
+form > div > div > div{
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+    padding-right: 5vw;
+    letter-spacing: 50%;
+}
+
+input{
+    appearance: auto;
+    border-radius: 5px;
+    border-width: 1px;
+    height: 3vh;
+    font-size: 15px;
+}
+
+label{
+    letter-spacing: 0.20vw;
+    padding-bottom: 0.25vh;
+}
+
+
+button{
+    position: relative;
+    top: 3vh;
+    left: 3vw;
+    width: 15vw;
+    height: 5vh;
+    border-radius: 8px;
+    appearance: auto;
+    border-width: 0;
+    background-color: #596D48;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 2.5px 5px #0a0a0a0e;
+    cursor: pointer;
+}
+
+button:hover{
+    transition: 200ms;
+    font-size: 25px;
+}
+
+button:hover button:after{
+    transition: 200ms;
+    font-size: 20px;
+}
+
+input:focus{
+    outline-color: rgb(0, 162, 255);
+    outline-style: solid;
+    outline-width: 2px;
+    box-shadow: 2.5px 5px #0a0a0a0e;
+}
+
+.bottom > p{
+    position: relative;
+    top: 7vh;
+    left:3vw;
+    font-weight: 500;
+}
+
+a{
+    color: #596D48;
+    font-weight: bold;
+    appearance: none;
+    text-decoration: none;
+}
+
+#password,
+#confirm_password{
+    font-size: 25px;
+
+}
+
+.pass{
+    border-color:red;
+    border-width: 2px;
 }
