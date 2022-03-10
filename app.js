@@ -1,19 +1,19 @@
+
+let password = document.getElementById("password")
+let confirm_password = document.getElementById("confirm_password");
+
 let checkpoint = function(){
-    password = document.getElementsByClassName("pass 1").value
-    confirm_password = document.getElementsByClassName("pass 2").value
-    if (password == confirm_password){
-        document.getElementsByClassName("pass 1").style.borderColor = "Green"
+    if (password.value == confirm_password.value){
+        document.getElementById("password").style.borderColor = "Green"
+        document.getElementById("confirm_password").style.borderColor = "Green"
+        document.getElementById("error").style.display = "none"
+        return
     }
-    return false
+    document.getElementById("password").style.borderColor = "Red"
+    document.getElementById("confirm_password").style.borderColor = "Red"
+    document.getElementById("error").style.display = "block"
+    return
 }
 
-let checkTrue = function(string1,string2){
-    if (string1 == string2){
-        return true
-    }
-    return false
-}
-
-document.getElementsByClassName("pass 1").addEventListener("keyup", checkpoint)
-
-document.getElementsByClassName("pass 2").addEventListener("keyup", checkpoint)
+password.onkeyup = checkpoint;
+confirm_password.onkeyup = checkpoint;

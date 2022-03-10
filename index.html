@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
+    <script defer src="app.js"></script>
     <title>Form Sign-Up</title>
 </head>
 <body>
@@ -46,6 +46,9 @@
                     <div>
                         <label for="password">PASSWORD</label>
                         <input type="password" id="password" class="pass 1" minlength="8" required>
+                        <p id= "error">
+                            *You passwords do not match
+                        </p>
                     </div>
                     <div>
                         <label for="confirm_password">CONFIRM PASSWORD</label>
@@ -56,7 +59,7 @@
         </form>
          
         <div class="bottom">
-            <button type="submit" form = "user_form" class = "button_submit">Create Account</button>
+            <button type="submit" form = "user_form" class = "button_submit" require onclick="checkpoint()">Create Account</button>
             <p>Already have an account? <a href="">Log in</a></p>
         </div>
     </div> 
